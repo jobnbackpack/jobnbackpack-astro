@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Test from '../components/test.tsx'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1>Welcome to <span class="text-gradient">jobnbackpack</span></h1>
 		<p class="instructions">
 			Check out the <code>src/pages</code> directory to get started.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -31,6 +32,8 @@ import Card from '../components/Card.astro';
 				title="Chat"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
+      <Test />
+      <div class="text-5xl">tailwind</div>
 		</ul>
 	</main>
 </Layout>
