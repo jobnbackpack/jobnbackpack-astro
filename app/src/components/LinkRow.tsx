@@ -1,13 +1,20 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
 
 function LinkRow() {
-  const Row = styled.div`
-    color: red;
-    font-size: 200px;
-  `;
-
-  return <Row>saonethu</Row>;
+  return (
+    <ul className='text-2xl gap-2 flex'>
+      <Link href="#" icontype="hello" />
+      <Link href="#" icontype="aosenuth" />
+    </ul>
+  )
 }
 
-export default LinkRow;
+const Link = ({ href, icontype }) => {
+  return (
+    <li>
+      <a href={href}>{icontype}</a>
+    </li>
+  )
+}
+
+export default LinkRow
