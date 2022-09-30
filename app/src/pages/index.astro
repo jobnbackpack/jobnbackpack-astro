@@ -25,27 +25,43 @@ import { Icon } from 'astro-icon'
     <section class="flex justify-evenly w-full text-gray-300">
       <article class="hover:text-gray-900 transition-colors">
         <a href="https://github.com/jobnbackpack" target="_blank">
-          <Icon pack="ant-design" name="github-outlined" class="w-[5rem]" />
-          <label class="text-center block text-2xl">github</label>
+          <Icon
+            pack="ant-design"
+            name="github-outlined"
+            class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
+          />
+          <span class="text-center block text-2xl">github</span>
         </a>
       </article>
       <article class="hover:text-[#1DA1F2] transition-colors">
         <a href="https://twitter.com/BackpackJobn" target="_blank">
-          <Icon pack="ant-design" name="twitter" class="w-[5rem]" />
-          <label class="text-center block text-2xl">twitter</label>
+          <Icon
+            pack="ant-design"
+            name="twitter"
+            class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
+          />
+          <span class="text-center block text-2xl">twitter</span>
         </a>
       </article>
       <article class="transition-colors relative text-gray-200">
-        <a href="#" data-after="coming soon">
+        <a href="#" data-after="coming soon" class="cursor-not-allowed">
           <!-- class="hover:after:content-[attr(data-after)] after:text-red-400 after:absolute after:left-5 after:top-1/2 after:rotate-[-5deg] after:font-bold hover:after:bg-black after:p-2 after:transition-all" -->
-          <Icon pack="ant-design" name="book-outlined" class="w-[5rem]" />
-          <label class="text-center block text-2xl">blog</label>
+          <Icon
+            pack="ant-design"
+            name="book-outlined"
+            class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
+          />
+          <span class="text-center block text-2xl">blog</span>
         </a>
       </article>
       <article class="transition-colors text-gray-200">
-        <a href="#">
-          <Icon pack="ant-design" name="rocket-outlined" class="w-[5rem]" />
-          <label class="text-center block text-2xl">projects</label>
+        <a href="#" class="cursor-not-allowed">
+          <Icon
+            pack="ant-design"
+            name="rocket-outlined"
+            class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
+          />
+          <span class="text-center block text-2xl">projects</span>
         </a>
       </article>
     </section>
