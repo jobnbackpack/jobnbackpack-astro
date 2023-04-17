@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 
 function LinkRow() {
-  return (
-    <ul className='text-2xl gap-2 flex'>
-      <Link href="#" icontype="hello" />
-      <Link href="#" icontype="aosenuth" />
-    </ul>
-  )
+    return (
+        <ul className="text-2xl gap-2 flex">
+            <Link href="#" icontype="hello" />
+            <Link href="#" icontype="aosenuth" />
+        </ul>
+    );
 }
 
 const Link = ({ href, icontype }) => {
-  return (
-    <li>
-      <a href={href}>{icontype}</a>
-    </li>
-  )
-}
+    return (
+        <li>
+            <a href={href}>{icontype}</a>
+        </li>
+    );
+};
 
-export default LinkRow
+export default LinkRow;
