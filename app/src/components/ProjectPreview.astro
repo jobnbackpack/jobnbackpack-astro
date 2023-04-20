@@ -1,15 +1,17 @@
 ---
 import { Icon } from 'astro-icon';
 
+// TODO: turn links into array with iconname
 interface Props {
     title: string;
     description: string;
     color?: string;
     gitLink?: string;
+    testflightLink?: string;
     moreLink?: string;
 }
 
-const { title, description, gitLink, moreLink, color = '#000000' } = Astro.props;
+const { title, description, gitLink, testflightLink, moreLink, color = '#000000' } = Astro.props;
 ---
 
 <article class="border-l-8 flex flex-col p-5" style={{ borderColor: color }}>
@@ -24,6 +26,17 @@ const { title, description, gitLink, moreLink, color = '#000000' } = Astro.props
                             <Icon
                                 pack="ant-design"
                                 name="github-outlined"
+                                class="inline-block w-7"
+                            />
+                        </a>
+                    )
+                }
+                {
+                    testflightLink && (
+                        <a href={testflightLink} target="_blank">
+                            <Icon
+                                pack="ant-design"
+                                name="apple-outlined"
                                 class="inline-block w-7"
                             />
                         </a>
