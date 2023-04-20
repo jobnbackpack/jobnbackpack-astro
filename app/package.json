@@ -1,5 +1,5 @@
 {
-    "name": "@example/basics",
+    "name": "jobnbackpack",
     "version": "0.0.1",
     "private": true,
     "scripts": {
@@ -12,7 +12,7 @@
     "dependencies": {
         "@astrojs/react": "^2.1.1",
         "@astrojs/tailwind": "^3.1.1",
-        "@types/react": "^18.0.19",
+        "@types/react": "^18.0.37",
         "astro": "^2.3.0",
         "astro-icon": "^0.7.3",
         "react": "^18.2.0",
