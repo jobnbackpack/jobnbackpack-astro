@@ -1,35 +1,28 @@
 ---
 import Header from '../components/Header.astro';
+import ProjectPreview from '../components/ProjectPreview.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Projects">
     <section>
-        <Header title="projects" imgUrl="project_thumbnail.JPG"/>
-        <a href="/projects/bqa">
-            <article
-                class="border border-gray-300 rounded-md p-4 m-5 hover:bg-gray-200 cursor-pointer"
-            >
-                <label class="font-bold">Bible Quiz App</label>
-                <p class="text-gray-500">
-                    A 'doulingo-like' quiz app to learn more about the Bible.
-                </p>
-            </article>
-        </a>
-        <!--<a href="/projects/bqa">-->
-        <article
-            class="border border-gray-300 rounded-md p-4 m-5 bg-gray-200"
-        >
-            <label class="font-bold">ORG Viewer</label>
-            <p class="text-gray-500">
-                A little Tauri app which parses org files with Rust and provides
-                it in a Svelte view
-            </p>
-        </article>
-        <!--</a>-->
-        <article class="border border-gray-300 rounded-md p-4 m-5 bg-gray-200">
-            <label class="font-bold">Apodixis</label>
-            <p class="text-gray-500">... currently paused</p>
-        </article>
+        <Header title="projects" imgUrl="project_thumbnail.JPG" />
+        <ProjectPreview
+            title="Bible Quiz App"
+            description="A 'doulingo-like' quiz app to learn more about the Bible."
+            moreLink="/projects/bqa"
+            color="#003278"
+        />
+        <ProjectPreview
+            title="ORG Viewer"
+            description="A little Tauri app which parses org files with Rust and provides it in a Svelte view"
+            gitLink="https://github.com/jobnbackpack/org-tauri"
+            color="#2d004d"
+        />
+        <ProjectPreview
+            title="Apodixis"
+            description="... currently paused"
+            color="#3fa642"
+        />
     </section>
 </Layout>

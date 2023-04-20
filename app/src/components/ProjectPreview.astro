@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon';
+
+interface Props {
+    title: string;
+    description: string;
+    color?: string;
+    gitLink?: string;
+    moreLink?: string;
+}
+
+const { title, description, gitLink, moreLink, color = '#000000' } = Astro.props;
+---
+
+<article class="border-l-8 flex flex-col p-5" style={{ borderColor: color }}>
+    <h2 class="text-4xl font-bold" style={{ color: color }}>\\ {title}</h2>
+    <section class="flex h-full">
+        <div class="flex-1 py-3">
+            <p>{description}</p>
+            <div class="mt-3 flex justify-end">
+                {
+                    gitLink && (
+                        <a href={gitLink} target="_blank">
+                            <Icon
+                                pack="ant-design"
+                                name="github-outlined"
+                                class="inline-block w-7"
+                            />
+                        </a>
+                    )
+                }
+                {
+                    moreLink && (
+                        <a href={moreLink}>
+                            <Icon
+                                pack="ant-design"
+                                name="exclamation-circle-outlined"
+                                class="inline-block w-7"
+                            />
+                        </a>
+                    )
+                }
+            </div>
+        </div>
+        <!--<div class="min-h-full max-w-4xl bg-gray-200">-->
+        <!--<div>this is the placeholder for screenshots</div>-->
+        <!--</div>-->
+    </section>
+</article>
