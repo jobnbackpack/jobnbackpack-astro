@@ -1,95 +1,119 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Icon } from 'astro-icon'
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon';
 ---
 
 <Layout title="jobnbackpack">
-  <main
-    class="absolute flex w-full h-full bg-gray-100 flex-col justify-center items-center"
-  >
-    <h1
-      class="text-4xl md:text-6xl xl:text-8xl text-gray-300 hover:scale-120 cursor-default transition-all m-10"
+    <main
+        class="absolute flex w-full h-full bg-gray-100 flex-col justify-center items-center"
     >
-      <Icon
-        pack="ant-design"
-        name="double-left-outlined"
-        class="inline-block w-[3rem] md:w-[6rem] xl:w-[10rem]"
-      /><span class="text-gradient mx-5">jobnbackpack</span><Icon
-        pack="ant-design"
-        name="double-right-outlined"
-        class="inline-block w-[3rem] md:w-[6rem] xl:w-[10rem]"
-      />
-    </h1>
+        <h1
+            class="text-4xl md:text-6xl xl:text-8xl text-gray-300 hover:scale-120 cursor-default transition-all m-10"
+        >
+            <Icon
+                pack="ant-design"
+                name="double-left-outlined"
+                class="inline-block w-[3rem] md:w-[6rem] xl:w-[10rem]"
+            /><span class="text-gradient mx-5">jobnbackpack</span><Icon
+                pack="ant-design"
+                name="double-right-outlined"
+                class="inline-block w-[3rem] md:w-[6rem] xl:w-[10rem]"
+            />
+        </h1>
 
-    <section class="flex justify-evenly w-full text-gray-300">
-      <article class="hover:text-gray-900 transition-colors">
-        <a href="https://github.com/jobnbackpack" target="_blank">
-          <Icon
-            pack="ant-design"
-            name="github-outlined"
-            class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
-          />
-          <span class="text-center block text-2xl">github</span>
-        </a>
-      </article>
-      <article class="hover:text-[#1DA1F2] transition-colors">
-        <a href="https://twitter.com/BackpackJobn" target="_blank">
-          <Icon
-            pack="ant-design"
-            name="twitter"
-            class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
-          />
-          <span class="text-center block text-2xl">twitter</span>
-        </a>
-      </article>
-      <article class="transition-colors relative text-gray-200">
-        <a href="#" data-after="coming soon" class="cursor-not-allowed">
-          <!-- class="hover:after:content-[attr(data-after)] after:text-red-400 after:absolute after:left-5 after:top-1/2 after:rotate-[-5deg] after:font-bold hover:after:bg-black after:p-2 after:transition-all" -->
-          <Icon
-            pack="ant-design"
-            name="book-outlined"
-            class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
-          />
-          <span class="text-center block text-2xl">blog</span>
-        </a>
-      </article>
-      <article class="hover:text-[#990000] transition-colors">
-        <a href="/projects" class="cursor-pointer">
-          <Icon
-            pack="ant-design"
-            name="rocket-outlined"
-            class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
-          />
-          <span class="text-center block text-2xl">projects</span>
-        </a>
-      </article>
-    </section>
-  </main>
+        <section class="flex justify-evenly w-full text-gray-300">
+            <article class="hover:text-gray-900 transition-colors">
+                <a href="https://github.com/jobnbackpack" target="_blank">
+                    <Icon
+                        pack="ant-design"
+                        name="github-outlined"
+                        class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
+                    />
+                    <span class="text-center block text-2xl">github</span>
+                </a>
+            </article>
+            <article class="hover:text-[#1DA1F2] transition-colors">
+                <a href="https://twitter.com/BackpackJobn" target="_blank">
+                    <Icon
+                        pack="ant-design"
+                        name="twitter"
+                        class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
+                    />
+                    <span class="text-center block text-2xl">twitter</span>
+                </a>
+            </article>
+            <article class="transition-colors relative text-gray-200">
+                <a href="#" data-after="coming soon" class="cursor-not-allowed">
+                    <!-- class="hover:after:content-[attr(data-after)] after:text-red-400 after:absolute after:left-5 after:top-1/2 after:rotate-[-5deg] after:font-bold hover:after:bg-black after:p-2 after:transition-all" -->
+                    <Icon
+                        pack="ant-design"
+                        name="book-outlined"
+                        class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
+                    />
+                    <span class="text-center block text-2xl">blog</span>
+                </a>
+            </article>
+            <article class="hover:text-[#990000] transition-color">
+                <a href="/projects" class="cursor-pointer">
+                    <Icon
+                        pack="ant-design"
+                        name="rocket-outlined"
+                        class="m-auto w-[3rem] md:w-[4rem] xl:w-[5rem]"
+                    />
+                    <span class="text-center block text-2xl">projects</span>
+                </a>
+            </article>
+        </section>
+    </main>
 </Layout>
 
-<style>
-  :root {
-    --jobnbackpack-gradient: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
-  }
-
-  .text-gradient {
-    font-weight: 900;
-    background-image: var(--jobnbackpack-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position-x: 100%;
-    border-radius: 0.4rem;
-    animation: pulse 4s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%,
-    100% {
-      background-position-x: 0%;
+<style type="css">
+    :root {
+        --jobnbackpack-gradient: linear-gradient(
+            90deg,
+            #1cb5e0 0%,
+            #000851 100%
+        );
     }
-    50% {
-      background-position-x: 80%;
+
+    article:hover svg {
+        @apply my-animate-bounce;
+        animation-delay: 0.2s;
     }
-  }
+
+    .text-gradient {
+        font-weight: 900;
+        background-image: var(--jobnbackpack-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position-x: 100%;
+        border-radius: 0.4rem;
+        animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%,
+        100% {
+            background-position-x: 0%;
+        }
+        50% {
+            background-position-x: 80%;
+        }
+    }
+
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+        50% {
+            transform: translateY(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+    }
+    .my-animate-bounce {
+        animation: bounce 1s infinite;
+    }
 </style>
